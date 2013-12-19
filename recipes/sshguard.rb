@@ -30,19 +30,19 @@ execute 'Append ip6tables rule unless already exists' do
 end
 
 service 'iptables' do
-  provider Chef::Provider::Service::Systemd if node['platform'] == 'arch'
+  provider Chef::Provider::Service::Systemd if node['platform'] =~ /arch|manjaro/
   supports status: true, start: true, stop: true, restart: true, reload: true
   action [:enable, :start]
 end
 
 service 'ip6tables' do
-  provider Chef::Provider::Service::Systemd if node['platform'] == 'arch'
+  provider Chef::Provider::Service::Systemd if node['platform'] =~ /arch|manjaro/
   supports status: true, start: true, stop: true, restart: true, reload: true
   action [:enable, :start]
 end
 
 service 'sshguard' do
-  provider Chef::Provider::Service::Systemd if node['platform'] == 'arch'
+  provider Chef::Provider::Service::Systemd if node['platform'] =~ /arch|manjaro/
   supports status: true, start: true, stop: true, restart: true, reload: true
   action [:enable, :start]
 end
