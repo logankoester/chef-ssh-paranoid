@@ -11,7 +11,7 @@ package('libssh2') { action :install }
 package('openssh') { action :install }
 
 service 'sshd' do
-  provider Chef::Provider::Service::Systemd if node['platform'] == 'arch'
+  provider Chef::Provider::Service::Systemd if node['platform'] =~ /arch|manjaro/
   supports status: true, start: true, stop: true, restart: true, reload: true
   action [:enable]
 end
