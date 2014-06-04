@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: ssh
-# Recipe:: default
-#
-# Copyright (C) 2013 Logan Koester
-# 
-# All rights reserved - Do Not Redistribute
-#
-
 package('libssh2') { action :install }
 package('openssh') { action :install }
 

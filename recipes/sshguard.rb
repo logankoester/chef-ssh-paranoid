@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: ssh
-# Recipe:: sshguard
-#
-# Copyright (C) 2013 Logan Koester
-# 
-# All rights reserved - Do Not Redistribute
-#
-
 package('sshguard') { action :install }
 
 execute 'Create iptables chain sshguard' do
