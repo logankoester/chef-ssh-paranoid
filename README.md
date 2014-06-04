@@ -42,6 +42,7 @@ Add `recipe[ssh::sshguard]` to your run list.
 
 * `node[:ssh][:port]` - Port to listen (default 22)
 * `node[:ssh][:password_authentication]` - `yes` or `no`
+* `node[:ssh][:banner]` - Greeting / banner string to be displayed upon connection
 
 ## Resources
 

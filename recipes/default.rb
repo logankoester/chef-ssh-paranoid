@@ -7,9 +7,9 @@ service 'sshd' do
   action [:enable]
 end
 
-cookbook_file '/etc/issue' do
-  source 'banner'
+template '/etc/issue' do
   mode 0755
+  source 'banner.erb'
   notifies :restart , resources(:service => 'sshd')
 end
 
