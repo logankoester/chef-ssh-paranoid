@@ -1,4 +1,4 @@
-name             'ssh'
+name             'ssh-paranoid'
 maintainer       'Logan Koester'
 maintainer_email 'logan@logankoester.com'
 license          'MIT'

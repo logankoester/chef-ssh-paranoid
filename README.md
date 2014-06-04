@@ -1,11 +1,13 @@
-# Gibson SSH
+# ssh-paranoid cookbook
+
+An ssh configuration with sensible paranoia. Tested with Arch Linux.
 
 ## Installation
 
 Using [Berkshelf](http://berkshelf.com/), add the `ssh` cookbook to your Berksfile.
 
 ```ruby
-    cookbook 'ssh', git: 'git@git.ldk.io:logankoester/gibson.git', rel: 'cookbooks/ssh', branch: 'master'
+    cookbook 'ssh-paranoid', git: 'git@github.com:logankoester/chef-ssh-paranoid.git'
 ```
 
 Then run `berks` to install it.
