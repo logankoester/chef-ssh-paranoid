@@ -1,6 +1,12 @@
 package('libssh2') { action :install }
 package('openssh') { action :install }
 
+execute 'Generate non-existent host keys for all key types' do
+  command 'ssh-keygen -A'
+  not_if { ::File.exists?("/etc/ssh/ssh_host_key") &&
+           ::File.exists?("/etc/ssh/ssh_host_key.pub") }
+end
+
 if node[:ssh][:supervisor]
   supervisor_service 'sshd' do
     action [:enable, :start]
