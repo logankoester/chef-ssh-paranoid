@@ -1,5 +1,6 @@
 default[:ssh][:port] = 22
 default[:ssh][:password_authentication] = 'no'
+default[:ssh][:supervisor] = false
 default[:ssh][:banner] = <<BANNER
     __    ____  __ __   _ 
    / /   / __ \/ //_/  (_)___
