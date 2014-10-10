@@ -79,7 +79,7 @@ ChallengeResponseAuthentication no
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
-UsePAM yes
+<% if node[:ssh][:use_pam] %>UsePAM yes<% else %>UsePAM no<% end %>
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
