@@ -1,4 +1,4 @@
 source 'https://api.berkshelf.com'
 metadata
 
-cookbook 'supervisor', github: 'logankoester/supervisor', branch: 'archlinux'
+cookbook 'supervisor', github: 'logankoester/supervisor'
